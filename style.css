@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=DM+Sans:opsz@9..40&family=Roboto&display=swap");
+
+:root {
+  --color-white: #fff;
+  --color-blue: #2f1893;
+  --color-pink: #e93a7d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--color-blue);
+  padding: 2rem 10rem;
+}
+
+/* Navbar */
+li {
+  list-style: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding {
+  color: var(--color-white);
+  text-align: start;
+  font-family: DM Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.293px;
+  width: 100%;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: var(--color-white);
+  /* Buttons / Middle */
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+}
+
+.last-navlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: var(--color-pink);
+  border-radius: 100px;
+}
+
+.nav-link:hover {
+  opacity: 0.3;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-white);
+}
+
+/* Hero section  */
+.app__hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.app__hero-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 2rem;
+}
+
+.app__hero-info h2 {
+  color: #fff;
+  /* Heading / H2 Header */
+  font-family: DM Sans;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; /* 120.69% */
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.app__hero-info h5 {
+  color: var(--color-white);
+
+  /* Heading / H5 Lead */
+  font-family: DM Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 145.455% */
+  margin-bottom: 1rem;
+}
+
+.app__hero-info button {
+  color: var(--color-white);
+  text-align: center;
+  /* width: 157px; */
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  background: var(--color-pink);
+
+  /* Buttons / Middle */
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.app__signup {
+  padding-top: 1rem;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.app__signup-form {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--color-white);
+  border-radius: 10px;
+}
+
+.app__signup-form h3 {
+  color: #1e0e62;
+  width: 100%;
+  text-align: center;
+
+  /* Heading / H3 Title */
+  font-family: DM Sans;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 123.81% */
+  letter-spacing: -0.4px;
+  margin-bottom: 1rem;
+}
+
+.app__signup-form input {
+  color: rgba(21, 20, 57, 0.4);
+  border-radius: 100px;
+  outline-style: none;
+  border: 2px solid #ebeaed;
+
+  /* Buttons / Middle */
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  width: 330px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: rgba(21, 20, 57, 0.4);
+  /* Text / Paragraph */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: var(--color-white);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #25dac5;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-white);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.app__signup-form button {
+  color: var(--color-white);
+  text-align: center;
+  padding: 0.5rem;
+  width: 330px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.signIn-btn {
+  background: #482be7;
+}
+
+.login-btn {
+  background: #1da1f2;
+}
+
+.optional {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.optional p {
+  color: rgba(21, 20, 57, 0.4);
+  text-align: center;
+
+  /* Text / Paragraph */
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  padding: 0rem 0.3rem;
+}
+
+.dash {
+  width: 141.57px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #ebeaed;
+}
+
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.signIn p {
+  color: rgba(21, 20, 57, 0.4);
+  text-align: center;
+
+  /* Text / Article */
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.signIn a {
+  color: #25dac5;
+
+  /* Text / Article */
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  text-decoration: none;
+}
+
+/* media queries */
+
+@media screen and (min-width: 1400px) {
+}
+
+@media screen and (max-width: 1110px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #2f1893;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app {
+    padding: 2rem 3rem;
+  }
+  .app__hero {
+    flex-direction: column;
+  }
+  .app__signup {
+    padding: 5rem 10rem;
+    justify-content: center;
+  }
+  .app__signup-form {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app__hero-info h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .app__hero-info h5 {
+    font-size: 22px;
+  }
+  .app__signup-form h3 {
+    font-size: 24px;
+  }
+  .app__signup {
+    padding: 2rem 0;
+  }
+  .app__signup-form input {
+    width: 200px;
+  }
+  .app__signup-form button {
+    width: 200px;
+  }
+  .dash {
+    width: 50px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #ebeaed;
+  }
+
+  .signIn p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .app__hero {
+    margin-top: 1rem;
+  }
+  .app__signup-form {
+    padding: 2rem 1rem;
+  }
+}
